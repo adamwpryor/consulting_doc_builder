@@ -8,19 +8,21 @@ This project provides a series of specialized bots, run through BoodleBox, to au
 
 ## Project Structure
 
-This project is organized into a series of "Bot Sets," each contained in its own directory. The core of the project is the **Project Workflow Controller**, which acts as a central hub to guide the user to the correct specialized bot.
+This project is organized into a numeric series of bot directories. This numeric convention allows for logical grouping of bot types. The core of the project is the **Project Workflow Controller** in directory `000`.
 
-### `00_DocHelperSet`
+### `000` - Workflow Controller
 - Contains the primary **Project Workflow Controller** (`00_DocHelper`).
 - This controller's instructions include a `Specialized Bot Schema` that references the instruction files for all other bots.
 - It manages the overall process but does not create document content itself.
 
-### `01_CharterBuilderSet`
-- Contains the specialized `PryorConsultingProjectCharterBuilder` bot.
-- This bot is responsible for generating Project Charters.
-- Its knowledge base, including the `CostStrategy.pdf` and `projectCharterTemplate.pdf`, is stored within this directory, making it a self-contained module.
+### `100` Series - Document Builders
+- This series contains bots focused on document creation.
+- **`101`**: Contains the `PryorConsultingProjectCharterBuilder` bot and all of its assets, including instruction files and knowledge base documents (`CostStrategy.pdf`, etc.).
 
-This modular structure allows for easier maintenance and scalability. New bots can be added by creating a new `...Set` directory and updating the schema in the `00_DocHelper`.
+### `200` Series - Meeting Analysis (Future)
+- This series is reserved for future bots that will analyze meeting transcripts and other artifacts.
+
+This modular structure allows for easier maintenance and scalability. New bots can be added by creating a new directory with the appropriate series number and updating the schema in the `000/00_DocHelper`.
 
 ## Usage
 
