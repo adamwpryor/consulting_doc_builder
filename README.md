@@ -11,15 +11,18 @@ This project provides a series of specialized bots, run through BoodleBox, to au
 This project is organized into a numeric series of bot directories. This numeric convention allows for logical grouping of bot types. The core of the project is the **Project Workflow Controller** in directory `000`.
 
 ### `000` - Workflow Controller
+
 - Contains the primary **Project Workflow Controller** (`00_DocHelper`).
 - This controller's instructions include a `Specialized Bot Schema` that references the instruction files for all other bots.
 - It manages the overall process but does not create document content itself.
 
 ### `100` Series - Document Builders
+
 - This series contains bots focused on document creation.
 - **`101`**: Contains the `PryorConsultingProjectCharterBuilder` bot and all of its assets, including instruction files and knowledge base documents (`CostStrategy.pdf`, etc.).
 
 ### `200` Series - Meeting Analysis (Future)
+
 - This series is reserved for future bots that will analyze meeting transcripts and other artifacts.
 
 This modular structure allows for easier maintenance and scalability. New bots can be added by creating a new directory with the appropriate series number and updating the schema in the `000/00_DocHelper`.
@@ -34,7 +37,7 @@ For example, to start a new proposal, you would select the option that directs y
 
 Contributions are welcome! If you'd like to improve the existing bots or add new ones, please follow these steps:
 
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Commit your changes.
-4.  Push your branch and submit a pull request.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Push your branch and submit a pull request.
