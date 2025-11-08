@@ -22,6 +22,7 @@ This project is organized into a numeric series of bot directories. This numeric
 - **Foundation Model:** GPT 4.1
 - This series contains bots focused on document creation.
 - **`101`**: Contains the `PryorConsultingProjectCharterBuilder` bot and all of its assets, including instruction files and knowledge base documents (`CostStrategy.pdf`, etc.).
+- **`102`**: Contains the `PryorConsultingSOWBuilder` bot, which transforms an approved Project Charter into a final, binding Statement of Work.
 
 ### `200` Series - Meeting Analysis
 
@@ -36,7 +37,7 @@ This modular structure allows for easier maintenance and scalability. New bots c
 
 The workflow is initiated by interacting with the `@@PryorConsultingDocumentsHelper`. It will present a menu of options to guide you to the correct specialized bot based on your position in the project lifecycle.
 
-For example, to start a new proposal, you would select the option that directs you to the `@@PryorConsultingProjectCharterBuilder`.
+For example, to start a new proposal, you would select the option that directs you to the `@@PryorConsultingProjectCharterBuilder`. To finalize an approved proposal into a contract, you would use the `@@PryorConsultingSOWBuilder`.
 
 ## Contributing
 
